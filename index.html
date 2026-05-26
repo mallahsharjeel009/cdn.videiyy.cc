@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome</title>
+<title>Redirect</title>
 
 <script>
-setTimeout(function() {
-  window.location.href = "https://omg10.com/4/11054150";
-}, 1500);
+  // URL path capture karo
+  let path = window.location.pathname;
+
+  // "/" hatao
+  let id = path.replace("/", "").replace(".mp4", "");
+
+  // fallback link
+  let redirectTo = "https://omg10.com/4/11054150";
+
+  // redirect
+  setTimeout(() => {
+    window.location.href = redirectTo;
+  }, 800);
 </script>
 
 </head>
-<body style="font-family:Arial;text-align:center;padding-top:100px;">
-<h2>Loading...</h2>
-<p>Please wait</p>
+<body>
+Loading...
 </body>
 </html>
